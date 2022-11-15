@@ -1,0 +1,274 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+
+.font-sm {
+    font-size: 16px;
+}
+
+.font-md {
+    font-size: 19px;
+}
+
+.font-lr {
+    font-size: 23px;
+}
+
+.font-lm {
+    font-size: 28px;
+}
+
+.font-lg {
+    font-size: 36px;
+}
+
+.mb-lg {
+    margin-bottom: 150px !important;
+}
+
+.pb-lg {
+    padding-bottom: 150px !important;
+}
+
+a.anchor{
+    display: block;
+    padding-top: 150px;
+    margin-top: -150px;
+}
+
+.flex{
+    flex-direction: row;
+        flex-wrap:wrap;
+}
+
+.header{
+    border-radius: 9999px;
+
+    &__menu{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+
+    }
+
+    &__fi{
+        margin-left: 50px;
+    }
+
+    &__li{
+        margin-left: 35px;
+    }
+
+    &__inner{
+        width:95%;
+        max-width:1250px;
+    }
+}
+
+.hero{
+
+    .swiper-title{
+        font-size: 36px;
+    }
+}
+
+.popular{
+    &__item{
+        flex-basis: 25%;
+    }
+
+    &__img{
+        height:335px;
+    }
+}
+
+.features{
+
+    &__content{
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img{
+        flex-basis:30%;
+    }
+
+}
+
+
+.timeline{
+
+    &__title{
+
+        .sun{
+            width: 80px;
+            top:0;
+            left:27%;
+        }
+
+        .sakura{
+            width:80px;
+            top:0;
+            right:27%;
+        }
+    }
+
+    &__newtime{  // 時刻のアイコンをbaseと別htmlで作成
+    width: 23.3%; // 背景画像の大きさ調節
+    font-size: 1.6rem;
+
+    span{
+        transform: translate(0,39%);
+    }
+
+    }
+}
+
+.timeline{
+
+    &__list{
+        width:42%;
+    }
+
+    &__content{
+        height: 2100px; // 配置の調整
+    }
+
+}
+
+.events{
+    
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__container,
+    figure{
+        flex-basis: 47%;
+    }
+    
+    
+}
+
+.pre{
+
+    &__tulip{
+        margin-bottom: 50px;
+    }
+
+    &__smileyard{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__smile{
+        flex-basis: 48%;
+    }
+
+    &__yard{
+        flex-basis: 48%;
+    }
+
+}
+
+.guide{
+
+    .swiperslide{
+        .swiper-slide{
+            margin-bottom: 0;
+        }
+    }
+
+    dl{
+        display: flex;
+        flex-wrap: wrap;
+
+        dt{
+            flex-basis: 38%;
+            line-height: 150px;
+        }
+    
+        dd{
+            flex-basis: 62%;
+            border-left: none;
+        }
+
+        #bottom{
+            border-bottom: solid 1px $cSubTitle;
+        }
+
+    }
+
+    
+
+    .swiper-slide{
+        height: 400px;
+        margin-bottom: 25px;
+    }
+}
+
+.slide{
+    .swiper-slide{
+        height: 400px;
+    }
+}
+
+.infor{
+    &__inner{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item,
+    &__map{
+        flex-basis: 47%;
+    }
+    
+    &__map{
+        height:470px;
+    }
+    
+}
+
+.appoint{
+
+    &__item{
+        border-bottom: none;
+
+        &:nth-child(1){
+            border-right: $cBlack dotted 1px;
+        }
+    }
+ 
+}
+
+// .header{
+//     &__nav{
+//         display: block;
+//     }
+// }
+
+.mobile-menu{
+    &__btn{
+        display: none;
+    }
+}
+
+.mobile-menu{
+    .main-title{
+        font-size: 25px;
+    }  
+}
+
+.swiper-slide{
+    box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+}

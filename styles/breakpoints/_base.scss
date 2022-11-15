@@ -1,0 +1,805 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+body {
+    font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+
+table{
+    border-collapse: collapse !important;
+    border-spacing: 0;
+    border-color: #D73F5E;
+}    
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+
+.font-sm {
+    font-size: 14px;
+}
+
+.font-md {
+    font-size: 15px;
+}
+
+.font-lr {
+    font-size: 17px;
+}
+
+.font-lm {
+    font-size: 20px;
+}
+
+.font-lg {
+    font-size: 25px;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mt-sm {
+    margin-top: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.content-width {
+    width:90%;
+    margin:0 auto;
+    max-width:$contentMaxWidth;
+}
+
+.new-width {
+    width:80%;
+    margin:0 auto;
+    max-width:$contentMaxWidth;    
+}
+
+a.anchor{
+    display: block;
+    padding-top: 200px;
+    margin-top: -200px;
+}
+
+.main-title{
+    @extend .font-lg;
+    font-weight:600;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+}
+
+.sub-title{
+    @extend .font-sm;
+    color:#D73F5E;
+    text-align: center;
+    font-family: 'Nunito Sans';
+}
+
+.flex{
+    display: flex;
+    flex-direction: column; 
+}
+
+.purple{
+    color: $cWineRed;
+}
+
+// #content{
+//     padding-top:$navHeight;　　hero-sliderの.hero{}に移動　
+// }
+
+#main-content{
+    position:relative;
+    z-index:0;
+}
+
+main{
+    position:relative;
+    z-index:-1;
+}
+
+#container{
+    transition: transform 0.5s, box-shadow 0.5s;
+    background-color: #FFFFF4;
+    position: relative;
+    z-index: 10;
+}
+
+.header{
+    position:fixed;
+    top:0%;
+    left:0;
+    width:100%;
+    height:$navHeight;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    z-index:100;
+
+    &.triggered{
+        background-color:rgba(255, 255, 255, 0.9);
+        box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+    }
+    
+
+    .logo{
+        font-size: 21px;
+        display: flex;
+        justify-content: center;
+        color:orange;
+    
+        &__img{
+            width:2.8em;
+            margin-right: 5px;
+        }
+
+        P{
+            font-size: 17px;
+        }
+
+        h3,p{
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    &__menu{
+        display:none;
+    }
+
+    // &__nav{
+    //     display:none;
+
+    // }
+
+    &__ul{
+        display:flex;
+        padding:0;
+        margin: 0;
+        list-style: none;
+        align-items: center;
+    }
+
+    &__li{
+        padding:0;
+        margin-left:25px;
+        @extend .font-md;
+        font-family: 'Kaisei HarunoUmi', serif;
+
+        &:hover{
+            & > a{
+                color: chocolate; 
+            }
+        }
+
+        & > a{
+            color:$cBlack;
+            text-decoration: none !important;
+            text-transform:uppercase;
+        }
+    }
+
+    &__inner{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend .content-width
+    }
+}
+
+.mobile-menu{
+    display:block;
+}
+
+.policy{
+    @extend .content-width;
+    @extend .mb-lg;
+    text-align: center;
+
+    &__one{
+        margin-bottom: 40px;
+
+        h3{
+            @extend .font-lr;
+        }
+
+        p{
+            @extend .font-md;
+        }
+    }
+
+    &__two{
+        margin-bottom: 40px;
+    }
+
+    &__three{
+        h3{
+            @extend .font-lr;
+        }
+    }
+
+    &__title{
+        @extend .font-lm;
+        display: inline-block;;
+        border-radius: 30px;
+        // border:1px solid $cBlack;
+        background-color: rgba(255,30,145,0.5);
+        padding:12px 44px;
+        @extend .mb-sm;
+    }
+
+    &__children{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @extend .font-md;
+    }
+
+    &__child{
+        width: 300px;
+        margin:0 auto;
+        margin-bottom: 5px;
+        padding:100px 80px;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        background-color: rgba(144,238,144,0.7);
+
+        &:nth-child(2){
+            background-color: rgba(244,164,96,0.7);
+        }
+
+        &:nth-child(3){
+            background-color: rgba(0,191,255,0.7);
+        }
+    }
+
+    &__goal{
+        text-align: center;
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        @extend .font-md;
+        
+    }
+
+    &__header{
+        @extend .mb-sm;
+        text-align: center;
+        h2{
+            @extend .font-lg;
+        }
+    }
+
+    #mt{
+        @extend .mt-sm;
+    }
+
+}
+
+.features{
+    @extend .content-width;
+    @extend .mb-lg;
+
+    &__title{
+        @extend .mb-lg;
+        background-image: url("../images/おもちゃsmm.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        .main-title{
+
+            margin-bottom: 1em;
+    
+            .game{
+                color:#D73F5E;
+                border-bottom:dotted 5px #D73F5E;
+            }
+        }
+    
+        .sub-title{
+            color:$cSubTitle;
+            line-height: 2.1;
+
+            .newline-lg{
+                display: none;
+            }
+        }
+    }
+
+    &__img{
+        text-align: center;
+        margin-bottom: 40px;
+
+        & > img{
+            object-fit: cover;
+            width:80%;
+            height:100%;
+            @extend .mb-sm;
+        }
+
+        h3{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .sub-title{
+            color:$cSubTitle;
+            text-align: start;
+        }
+    }
+}
+
+.timeline{
+    @extend .mb-lg;
+    position: relative;
+    
+    &__inner{
+        @extend .content-width;
+    }
+
+    &__title{
+        margin-bottom: 56px;
+        background-image: url("../images/flowerp.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        img{
+            display: none;
+        }
+    }
+
+    &__content{
+        position: relative;
+        padding-left: 0;  // デフォルトのpadding消去
+        
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 11.3%;
+            background-color:#95cc0e;
+            display: block;
+            width:1px;
+            height:100%;
+        }
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
+
+
+    &__img{
+        flex-basis: 75%;
+        margin-bottom: 20px;
+
+        .cover-slide{
+            @extend .mb-sm;
+            border-radius: 8px;
+        }
+
+        .bg-img-zoom{
+            // height:160px;
+            border-radius: 8px;
+        }
+
+        & > img{
+            @extend .mb-sm;
+            border-radius: 8px;
+        }
+
+        h3{
+            margin-bottom: 0; // デフォルトのpadding消去
+            color: #D73F5E;
+        }
+
+        .sub-title{
+            color: $cSubTitle;
+            text-align: start;
+        }
+    }
+
+
+    &__time{
+        position: relative;
+        // width:61.5px;
+        width: 13.3%;
+        font-size: 1.2rem;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        border-top: solid 9px #FFFFF4;
+        border-bottom: solid 10px #FFFFF4;
+        flex-basis: 23%;
+        text-align: center;
+        background-image: url("../images/tamanegip.png");
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color:$cSubTitle;
+        font-weight: 600;
+        display: block;
+        line-height: 2.5;
+
+        span{
+            position:relative; // z-indexの付与
+            z-index: 2;
+            transform: translate(0,22%); // 背景画像に対する文字の位置調整
+            display: block;
+            text-align: center;
+
+            &::after{  // 背景画像の大きさ調整の為、理屈は分かりません
+                content: "";
+                display: block;
+                padding-top:15%;
+            }
+        }
+    }
+
+    .even{
+        background-image: url("../images/tamanegipo.png");
+
+    }
+
+    &__newtime{
+        display:none;
+    }
+
+    &__wave{
+        & > img{
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            max-width: 100%;
+
+        }
+    }
+}
+
+.events{
+    @extend .mb-lg;
+
+    &__header{
+        @extend .content-width;
+    }
+
+    &__inner{
+        @extend .content-width;
+        @extend .mb-lg;
+    }
+
+    &__table{
+                @extend .mb-sm;
+                
+                tr{
+                    border-top: solid 1px #d9d9d9;
+                    border-bottom: solid 1px #d9d9d9;
+                }
+        
+                th{
+                    width:100px;
+                    height:50px;
+                    padding-left: 15px;
+                    background-color: #95cc0e;
+                    color: $cWhite;
+                }
+        
+                td{
+                    height: 50px;
+                    padding:0 12px;
+                }
+        
+    }
+        
+   
+    figure{
+            @extend .content-width;
+    
+            & > img{
+                object-fit: cover;
+                width:100%;
+                height:100%;
+                max-width: 100%;
+    
+            }
+    } 
+    
+    &__wave{
+        & > img{
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            max-width: 100%;
+
+        }
+    }
+
+}
+
+.pre{
+    @extend .pb-lg;
+    // background-color: #FEF9E2;
+    position: relative;
+    text-align: center;
+
+    &__inner{
+        @extend .content-width;
+    }
+    
+
+    &__tulip{
+        margin-bottom: 30px;
+    }
+
+    &__smile{
+        margin-bottom: 30px;
+    }
+    
+    &__table{
+
+        @extend .mb-sm;
+        margin:auto;
+        
+        tr{
+            border-top: solid 1px #d9d9d9;
+            border-bottom: solid 1px #d9d9d9;
+        }
+
+        th{
+            width:80px;
+            height:50px;
+            background-color: #95cc0e;
+            color: $cWhite;
+        }
+
+        td{
+            height: 50px;
+            padding:0 12px;
+        }
+
+    }
+    
+}
+
+.guide{
+    @extend .mb-lg;
+    position: relative;
+
+    &__inner{
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            bottom:0;
+            left:o;
+            width:100%;
+            height: 90%;
+            background-color: rgba(204, 255, 153, 0.7);
+        }
+    }
+
+    &__header{
+        @extend .content-width;
+    }
+
+    &__information{
+        @extend .content-width;
+        text-align: center;
+        // border:solid 1px $cSubTitle;
+        position: relative;
+        z-index: 2;
+        @extend .mb-sm;
+        // @extend .pb-lg;
+        
+        dl{
+            margin-bottom: 0;
+
+            dt{
+                border: solid 1px $cSubTitle;
+                border-bottom: none;
+                padding: 15px;
+                background-color: #FCE3E8;
+                color: #D73F5E;
+            }
+    
+            dd{
+                border: solid 1px $cSubTitle;
+                border-bottom: none;
+                margin-bottom: 0;
+                padding: 10px;
+                line-height: 2;
+                background-color: $cWhite;
+            }
+
+            #bottomd{
+                border-bottom: solid 1px $cSubTitle;
+            }
+        }
+    }
+
+    &__swiper{
+        @extend .content-width;
+        overflow: hidden;
+        @extend .pb-lg;
+    }
+}
+
+.infor{
+    @extend .content-width;
+    @extend .mb-lg;
+
+    &__header{
+        @extend .mb-sm;
+        h2{
+            @extend .font-lg;
+        }
+    }
+
+    &__table{
+        @extend .mb-sm;
+    }
+
+    &__img{
+        @extend .mb-sm;
+
+        & > img{
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            border-radius: 8px;
+        }
+    }
+
+    &__map{
+        height:300px;
+        @extend .mb-sm;
+
+        & > iframe{
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            border-radius: 8px;
+        }
+    }
+
+    &__btn{
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+}
+
+.appoint{
+    @extend .content-width;
+
+    &__title{
+        border-bottom: $cBlack dotted 1px;
+        @extend .mb-sm
+    }
+
+    &__nav{
+        @extend .flex;
+        justify-content: space-between;
+        // align-items:center;
+        text-align: center;
+    }
+
+    &__item{
+        flex-basis: 50%;
+        border-bottom: $cBlack dotted 1px;
+        @extend .mb-sm;
+        p{
+            @extend .font-lr;
+        }
+        h3{
+            @extend .font-lm;
+        }
+        button{
+            margin:0;
+        }
+        // &:nth-child(1){
+        //     border-bottom: $cBlack dotted 1px;
+        //     @extend .mb-sm;
+
+        // }
+    }
+
+    &__tel{
+        color:$cBlack;
+        text-decoration: none;
+    }
+}
+
+@media(min-width: 768px){
+    a[href^="tel:"]{
+      pointer-events: none;
+    }
+  }
+
+footer{
+    padding:60px 0;
+    text-align: center;
+    @extend .content-width;
+
+    .logo{
+        margin-bottom: 30px;
+    }
+
+    .icon{
+        position:relative;
+    
+        @include p-base($left:-20px, $top:50%, $width:1em, $height:1em ){
+            transform: translateY(-50%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    
+        &.instagram{
+            color:$cBlack;
+            text-decoration: none;
+            &:hover{
+                color: orange;
+            }
+
+            &::before{
+                background-image: url(../images/インスタ_icon.jpg);
+            }
+        }
+    }
+    
+    
+    
+}
+
+.logo{
+    font-size: 130px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__img{
+        width:0.7em;
+    }
+}
+
+.last{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:$cSubTitle;
+    margin-top: 20px;
+
+    // &__img{
+    //     width: 6.7em;
+    // }
+
+    & > span{
+        color: $cSubTitle;
+    }
+}

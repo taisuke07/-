@@ -1,0 +1,76 @@
+/******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+
+.popular{
+    &__item{
+        flex-basis: 23%;
+    }
+
+}
+
+.seat{
+    &__item{
+        flex-basis: 23%;
+    }
+
+}
+
+.travel{
+
+    &__inner{
+        padding:50px 150px;
+    }
+
+}
+
+.course{
+
+    &__inner{
+        padding:50px 150px;
+    }
+
+}
+
+.timeline{
+
+    &__newtime{
+        width:300px;
+
+
+        &:nth-child(3){
+            top:24.5%;
+        }
+
+        &:nth-child(5){
+            top:44.5%;
+        }
+
+        &:nth-child(6){
+            top:55%;
+        }
+
+        &:nth-child(7){
+            top:64%;
+        }
+
+        &:nth-child(8){
+            top:74.5%;
+        }
+    }
+
+}
+
+.side{
+    display: block;
+}
+
+.guide{
+
+    &::before{
+        height:9%;
+        top:-7.5%;
+    }
+}
